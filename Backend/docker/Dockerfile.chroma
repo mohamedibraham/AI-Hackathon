@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+
+ARG CHROMA_VERSION=1.5.9
+
+RUN pip install --no-cache-dir chromadb==${CHROMA_VERSION}
+
+ENV CHROMA_HOST=0.0.0.0
+ENV CHROMA_PORT=8000
+ENV CHROMA_DATA_PATH=/data
+
+RUN mkdir -p /data
+
+VOLUME ["/data"]
+
+EXPOSE 8000
+
+CMD ["sh", "-c", "chroma run --path \"$CHROMA_DATA_PATH\" --host \"$CHROMA_HOST\" --port \"$CHROMA_PORT\""]
