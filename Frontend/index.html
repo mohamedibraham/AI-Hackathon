@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RAG Squad</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="brand">
+
+                <div class="logo">
+                    ✦
+                </div>
+
+                <div class="brand-text">
+                    <h2>RAG SQUAD</h2>
+                    <p>AI-Powered Document Assistant</p>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle theme">
+                    ☾
+                </button>
+
+                <div class="user-profile">
+
+                    <div class="avatar">
+                        U
+                    </div>
+
+                    <span>User</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <div class="main-layout">
+
+
+            <!-- ================= SIDEBAR ================= -->
+
+            <aside class="sidebar">
+
+                <button
+                    class="new-chat-btn"
+                    id="newChatBtn">
+
+                    <span class="plus">＋</span>
+
+                    <span>New Chat</span>
+
+                </button>
+
+
+                <div class="sidebar-bottom">
+
+                    <button
+                        class="sidebar-item"
+                        id="documentsBtn">
+
+                        <span>📄</span>
+
+                        <span>Documents</span>
+
+                    </button>
+
+
+                    <button
+                        class="sidebar-item"
+                        id="settingsBtn">
+
+                        <span>⚙</span>
+
+                        <span>Settings</span>
+
+                    </button>
+
+
+                    <div class="storage">
+
+                        <div class="storage-header">
+
+                            <span>Storage</span>
+
+                            <span>0 / 10 MB</span>
+
+                        </div>
+
+                        <div class="storage-bar">
+
+                            <div class="storage-progress"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- ================= CHAT AREA ================= -->
+
+            <main class="chat-area">
+
+
+                <!-- ================= WELCOME ================= -->
+
+                <section
+                    class="welcome"
+                    id="welcome">
+
+                    <div class="welcome-logo">
+                        ✦
+                    </div>
+
+                    <h1>
+                        Ask your documents anything.
+                    </h1>
+
+                    <p>
+                        Upload your documents and get accurate,
+                        context-aware answers using RAG.
+                    </p>
+
+
+                    <!-- Suggestions -->
+
+                    <div class="suggestions">
+
+                        <button class="suggestion">
+
+                            <span>📄</span>
+
+                            <div>
+
+                                <strong>
+                                    Summarize a document
+                                </strong>
+
+                                <small>
+                                    Get the main points
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <span>🔍</span>
+
+                            <div>
+
+                                <strong>
+                                    Find information
+                                </strong>
+
+                                <small>
+                                    Search your documents
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <span>💡</span>
+
+                            <div>
+
+                                <strong>
+                                    Explain a topic
+                                </strong>
+
+                                <small>
+                                    Understand complex ideas
+                                </small>
+
+                            </div>
+
+                        </button>
+
+
+                        <button class="suggestion">
+
+                            <span>📊</span>
+
+                            <div>
+
+                                <strong>
+                                    Compare information
+                                </strong>
+
+                                <small>
+                                    Compare different sources
+                                </small>
+
+                            </div>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= MESSAGES ================= -->
+
+                <section
+                    class="messages"
+                    id="messages">
+                </section>
+
+
+                <!-- ================= LOADING ================= -->
+
+                <div
+                    class="typing-container hidden"
+                    id="typing">
+
+                    <div class="ai-avatar">
+                        ✦
+                    </div>
+
+                    <div class="typing">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= INPUT ================= -->
+
+                <div class="input-section">
+
+
+                    <!-- Selected File -->
+
+                    <div
+                        class="selected-file hidden"
+                        id="selectedFile">
+
+                        <span>📄</span>
+
+                        <span id="fileName">
+                            document.pdf
+                        </span>
+
+                        <button id="removeFile">
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+
+                        <!-- Attachment -->
+
+                        <button
+                            class="attach-btn"
+                            id="attachBtn"
+                            title="Upload document">
+
+                            📎
+
+                        </button>
+
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept=".pdf,.txt,.doc,.docx"
+                            hidden>
+
+
+                        <!-- Message -->
+
+                        <textarea
+                            id="messageInput"
+                            rows="1"
+                            placeholder="Ask anything about your documents...">
+                        </textarea>
+
+
+                        <!-- Send -->
+
+                        <button
+                            class="send-btn"
+                            id="sendBtn"
+                            title="Send">
+
+                            ➤
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="input-hint">
+
+                        RAG Assistant can make mistakes.
+                        Verify important information.
+
+                    </p>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> 
