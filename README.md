@@ -350,10 +350,6 @@ The response includes the recommendation, supporting evidence, a confidence leve
 
 The project's frontend client provides a chat-style interface over this same API, showing the answer alongside a live source-trace panel for each citation.
 
-## 15. Demo / Live Video
-
-> _Add a link to the live demo / walkthrough video here._
-
 [![Watch the demo](https://img.shields.io/badge/demo-video-blue)](#)
 
 ---
