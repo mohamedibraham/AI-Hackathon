@@ -1,4 +1,4 @@
-# Clinical Guideline RAG — Hypertension Assistant
+# Clinical Guideline RAG 
 
 > A safe, source-traceable Retrieval-Augmented Generation (RAG) system that answers clinical questions **exclusively** from official medical guidelines — with every answer grounded in a citable page, and every risky question caught before it reaches the model.
 
