@@ -345,13 +345,6 @@ curl -X POST http://localhost:8000/generate \
   -H "Content-Type: application/json" \
   -d '{"query": "When should antihypertensive drug treatment start for stage 1 hypertension?", "top_k": 5}'
 ```
-
-The response includes the recommendation, supporting evidence, a confidence level, a safety note, and a full citation list — each citation pointing to the exact document, section, and page it came from.
-
-The project's frontend client provides a chat-style interface over this same API, showing the answer alongside a live source-trace panel for each citation.
-
-[![Watch the demo](https://img.shields.io/badge/demo-video-blue)](#)
-
 ---
 
 <p align="center">Built for the AI Hackathons program — a source-traceable RAG system for a domain where trust isn't optional.</p>
