@@ -1,0 +1,234 @@
+[
+  {
+    "id": "Q01",
+    "category": "direct",
+    "question": "What training and device requirements must be in place before healthcare professionals measure a patient's blood pressure?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 5,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p5_c2_09895b"
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "category": "direct",
+    "question": "How should blood pressure be measured in a person with symptoms of postural hypotension, such as falls or dizziness on standing?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 6,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p5_c2_09895b"
+      }
+    ]
+  },
+  {
+    "id": "Q03",
+    "category": "direct",
+    "question": "What should be done if a person's blood pressure reading differs by more than 15 mmHg between their two arms?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 7,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p7_c3_792634"
+      }
+    ]
+  },
+  {
+    "id": "Q04",
+    "category": "direct",
+    "question": "What clinic, ABPM, and HBPM blood pressure readings are required to confirm a diagnosis of hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 8,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p7_c3_792634"
+      }
+    ]
+  },
+  {
+    "id": "Q05",
+    "category": "direct",
+    "question": "What tests should be offered to every person with hypertension to assess for target organ damage and cardiovascular risk?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 10,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p9_c4_fb4cee"
+      }
+    ]
+  },
+  {
+    "id": "Q06",
+    "category": "direct",
+    "question": "Which adults should be offered antihypertensive drug treatment for persistent stage 2 hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 12,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p12_c5_a0b5ac"
+      }
+    ]
+  },
+  {
+    "id": "Q07",
+    "category": "direct",
+    "question": "What is the recommended clinic blood pressure target for adults with hypertension who are under 80 years old?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 16,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p14_c6_f104e7"
+      }
+    ]
+  },
+  {
+    "id": "Q08",
+    "category": "direct",
+    "question": "According to Table 1, what is the clinic blood pressure target for a person under 80 with chronic kidney disease and an albumin:creatinine ratio of 70 mg/mmol or more?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 14,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p14_c6_f104e7"
+      }
+    ],
+    "notes": "Answer should be 'below 130/80 mmHg', sourced from Table 1."
+  },
+  {
+    "id": "Q09",
+    "category": "direct",
+    "question": "Which antihypertensive drug class is preferred for adults of Black African or African-Caribbean family origin starting treatment?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 18,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p18_c8_e2c895"
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "direct",
+    "question": "Who should be offered a calcium-channel blocker (CCB) as step 1 antihypertensive treatment?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 20,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p20_c9_41e5e3"
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "direct",
+    "question": "What should be considered as step 4 treatment for a person with confirmed resistant hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 23,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p22_c10_e3b038"
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "direct",
+    "question": "When should a person with a clinic blood pressure of 180/120 mmHg or higher be referred for same-day specialist assessment?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 24,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p24_c11_772ab6"
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "direct",
+    "question": "What is the definition of accelerated (malignant) hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 25,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p24_c11_772ab6"
+      }
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "direct",
+    "question": "How is masked hypertension defined?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 25,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p24_c11_772ab6"
+      }
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "direct",
+    "question": "What is the definition of the white-coat effect in blood pressure measurement?",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 26,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p26_c12_91d4d4"
+      }
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "direct",
+    "question": "According to the USPSTF, what grade did it assign to its recommendation for screening adults for hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Screening for Hypertension in Adults - USPSTF Reaffirmation Recommendation Statement (2021)",
+        "page_number": 1650,
+        "chunk_id": "screening-for-hypertension-in-adults-usp_p1650_c1_b00c30"
+      }
+    ],
+    "notes": "Answer: Grade A."
+  },
+  {
+    "id": "Q17",
+    "category": "direct",
+    "question": "According to the USPSTF, how often should adults aged 40 or older be screened for hypertension?",
+    "expected_answers": [
+      {
+        "document_name": "Screening for Hypertension in Adults - USPSTF Reaffirmation Recommendation Statement (2021)",
+        "page_number": 1652,
+        "chunk_id": "screening-for-hypertension-in-adults-usp_p1652_c2_6f4b24"
+      }
+    ],
+    "notes": "Answer: annually (every year); every 3-5 years for lower-risk adults aged 18-39."
+  },
+  {
+    "id": "Q18",
+    "category": "composite",
+    "question": "Compare how NICE and the USPSTF recommend confirming a diagnosis of hypertension outside the clinical setting.",
+    "expected_answers": [
+      {
+        "document_name": "Hypertension in adults: diagnosis and management",
+        "page_number": 8,
+        "chunk_id": "hypertension-in-adults-diagnosis-and-man_p7_c3_792634"
+      },
+      {
+        "document_name": "Screening for Hypertension in Adults - USPSTF Reaffirmation Recommendation Statement (2021)",
+        "page_number": 1650,
+        "chunk_id": "screening-for-hypertension-in-adults-usp_p1650_c1_b00c30"
+      }
+    ],
+    "notes": "Tests multi-document synthesis: NICE specifies numeric ABPM/HBPM diagnostic thresholds (135/85 mmHg); USPSTF recommends out-of-clinic confirmation (ABPM or HBPM) before starting treatment but does not itself set the diagnostic threshold."
+  },
+  {
+    "id": "Q19",
+    "category": "out_of_scope",
+    "question": "What is the recommended starting dose of amlodipine for treating hypertension?",
+    "expected_answers": [],
+    "notes": "Deliberately out of scope / insufficient evidence. NICE NG136 recommends drug CLASSES per treatment step (e.g. CCB, ACE inhibitor) but does not specify dosing regimens for individual drugs. A correct system should retrieve no confident chunk and respond with an 'insufficient evidence' / safe-refusal answer rather than fabricating a dose -- use this as a Day 4 guardrail test case as well as a Day 2 negative-retrieval case."
+  }
+]

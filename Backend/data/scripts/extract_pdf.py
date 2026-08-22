@@ -3,15 +3,26 @@ import re
 from collections import Counter
 from pathlib import Path
 
-import pymupdf as fitz  
+import pymupdf as fitz
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-RAW_DIR = BASE_DIR / "raw_pdfs"
-OUT_DIR = BASE_DIR / "extracted"
-SOURCES_FILE = BASE_DIR / "sources.json"
+from helpers.config import get_settings
+
+settings = get_settings()
+
+BASE_DIR = settings.BASE_DIR
+RAW_DIR = settings.RAW_PDF_DIR
+OUT_DIR = settings.EXTRACTED_DIR
+SOURCES_FILE = settings.DATA_DIR / "sources.json"
+
+
+MIN_PAGES_FOR_REPEATED_LINE_DETECTION = 4
 
 
 def load_sources():
+    if not SOURCES_FILE.exists():
+        raise FileNotFoundError(
+            f"{SOURCES_FILE} not found. Ensure that the sources.json file exists in data/."
+        )
     with open(SOURCES_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -27,9 +38,11 @@ def extract_pages(pdf_path: Path):
 
 
 def detect_repeated_lines(pages, min_ratio=0.4, min_len=3):
-    
-    line_counts = Counter()
     total_pages = len(pages)
+    if total_pages < MIN_PAGES_FOR_REPEATED_LINE_DETECTION:
+        return set()
+
+    line_counts = Counter()
     for _, text in pages:
         seen_this_page = set()
         for line in text.split("\n"):
@@ -56,17 +69,17 @@ def clean_page_text(text: str, repeated_lines: set) -> str:
     for line in text.split("\n"):
         norm = re.sub(r"\s+", " ", line).strip()
         if norm in repeated_lines:
-            continue 
+            continue
         if re.fullmatch(r"\d+", norm):
-            continue  
+            continue
         if PAGINATION_PATTERN.match(norm):
-            continue  
+            continue
         cleaned_lines.append(line)
 
     cleaned = "\n".join(cleaned_lines)
-    cleaned = re.sub(r"[ \t]+", " ", cleaned)          
-    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)    
-    return cleaned    
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned
 
 
 def process_document(source: dict):
@@ -76,14 +89,24 @@ def process_document(source: dict):
         return None
 
     print(f"[processing] {source['document_name']} ({pdf_path.name})")
-    pages = extract_pages(pdf_path)
+
+    try:
+        pages = extract_pages(pdf_path)
+    except Exception as e:
+        print(f"[error] failed to read {pdf_path.name}: {e}")
+        return None
+
+    if len(pages) < MIN_PAGES_FOR_REPEATED_LINE_DETECTION:
+        print(f"  [warn] only {len(pages)} page(s) -- skipping repeated-line "
+              f"detection (too few pages for a reliable header/footer signal)")
+
     repeated_lines = detect_repeated_lines(pages)
 
     records = []
     for page_number, raw_text in pages:
         cleaned = clean_page_text(raw_text, repeated_lines)
         if not cleaned:
-            continue  
+            continue
         records.append({
             "document_name": source["document_name"],
             "source_url": source["source_url"],
